@@ -3,6 +3,8 @@ package token_service
 import (
 	"fmt"
 	"grpc1/util"
+
+	pb "github.com/aydogduyusuf/grpc1/pb"
 )
 
 // Server serves gRPC requests for our service

@@ -2,17 +2,17 @@ syntax = "proto3";
 
 package pb;
 
-import "user.proto";
+import "token.proto";
 
-option go_package = "github.com/aydogduyusuf/DBchain/pb";
+option go_package = "github.com/aydogduyusuf/grpc1/pb";
 
-message CreateUserRequest {
-  string username = 1;
-  string password = 2;
-  string full_name = 3;
-  string email = 4;
+message DeployTokenRequest {
+  string public_key = 1;
+  string name = 2;
+  string symbol = 3;
+  string supply = 4;
 }
 
-message CreateUserResponse {
-  User user = 1;
+message DeployTokenResponse {
+  Token token = 1;
 }

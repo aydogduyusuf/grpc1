@@ -4,21 +4,21 @@ package pb;
 
 import "google/api/annotations.proto";
 
-import "rpc_create_user.proto";
-import "rpc_login_user.proto";
+import "rpc_deploy_token.proto";
+import "rpc_transfer_token.proto";
 
-option go_package = "github.com/aydogduyusuf/DBchain/pb";
+option go_package = "github.com/aydogduyusuf/grpc1/pb";
 
-service DBchain {
-    rpc CreateUser (CreateUserRequest) returns (CreateUserResponse) {
+service grpc1 {
+    rpc DeployToken (DeployTokenRequest) returns (DeployTokenResponse) {
         option (google.api.http) = {
-            post: "/v1/create_user"
+            post: "/v1/deploy_token"
             body: "*"
         };
     }
-    rpc LoginUser (LoginUserRequest) returns (LoginUserResponse) {
+    rpc TransferToken (TransferTokenRequest) returns (TransferTokenResponse) {
         option (google.api.http) = {
-            post: "/v1/login_user"
+            post: "/v1/transfer_token"
             body: "*"
         };
     }
