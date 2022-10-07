@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"grpc1/util"
 
-	pb "github.com/aydogduyusuf/grpc1/pb"
+	pb "../pb"
 )
 
 // Server serves gRPC requests for our service
